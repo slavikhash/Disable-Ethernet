@@ -9,13 +9,13 @@ def print_pressed_keys(e):
             print(
                 'Отключаем соединение'
                 )
-            os.system("wmic path win32_networkadapter where index=11 call disable")
+            os.system("wmic path win32_networkadapter where index=14 call disable")
         if e.event_type == 'up':
             pressed = 1
             print(
                 'Включаем соединение'
                 )
-            os.system("wmic path win32_networkadapter where index=11 call enable")
+            os.system("wmic path win32_networkadapter where index=14 call enable")
 
 
 keyboard.hook(print_pressed_keys)
